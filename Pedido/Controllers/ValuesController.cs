@@ -21,6 +21,9 @@ namespace Pedido.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
+            if (id == 666)
+                throw new Exception();
+
             return "value";
         }
 
